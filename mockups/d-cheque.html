@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mockup D · Cheque</title><link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;700;800&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--blue:#2c4a9a;--paper:#f4f7fc;--slot:#e3eaf6;--mut:#56627c}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:400 18px/1.5 'Hanken Grotesk',sans-serif}
+.bar{display:flex;justify-content:space-between;padding:24px 48px;align-items:center}.bar b{font:400 24px 'Newsreader',serif}.bar span{color:var(--mut)}
+.cheque{margin:16px 48px 0;background:var(--paper);padding:48px;display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.f{background:var(--slot);padding:14px 22px;min-height:76px}.f small{display:block;color:var(--mut);font-size:14px}.f b{font:400 clamp(26px,3vw,44px)/1.1 'Newsreader',serif;letter-spacing:-.02em}
+.name{grid-column:1/9;grid-row:1/3}.name b{font:300 clamp(70px,9vw,150px)/.92 'Newsreader',serif;letter-spacing:-.04em}
+.date{grid-column:9/13}.amt{grid-column:9/13;background:var(--blue);color:#fff}.amt small{color:#cfd9f2}
+.pay{grid-column:1/13}.memo{grid-column:1/7}.sig{grid-column:7/13}
+.sig svg{width:100%;height:56px}.sig path{fill:none;stroke:var(--blue);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:d 3s .4s forwards}@keyframes d{to{stroke-dashoffset:0}}
+.micro{grid-column:1/13;font:500 20px 'Hanken Grotesk';letter-spacing:.2em;color:#8a96b0;padding-top:8px}
+.s{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:14px 48px 56px}.s div{background:var(--paper);padding:30px}.s b{display:block;font:300 72px/1 'Newsreader',serif;color:var(--blue)}
+</style></head><body><div class="bar"><b>Javohir Ikromov</b><span>Numbers · Story · Program · Work · Vault</span></div>
+<section class="cheque"><div class="f name"><small>Pay to the order of</small><b>Javohir Ikromov</b></div><div class="f date"><small>Date</small><b>2026</b></div><div class="f amt"><small>Amount</small><b>100%</b></div>
+<div class="f pay"><small>The sum of</small><b>One finance applicant, one free platform, one honest effort</b></div>
+<div class="f memo"><small>Memo</small><b>SAT 1310 · IELTS 7.0 · 1 of 1,500</b></div>
+<div class="f sig"><small>Signed</small><svg viewBox="0 0 300 70"><path pathLength="1" d="M14 14c14-6 22-4 20 10-3 22-14 34-26 30 6 4 22 0 34-14 8-10 12-22 6-18-8 6-6 26 4 24 10-2 18-16 22-24-4 14-2 26 8 22 8-4 16-16 20-24-2 12 2 22 12 18 12-5 20-20 26-22 6-2 0 14 10 14 8 0 16-14 18-18 2 10 8 14 18 8 14-9 28-24 40-26"/></svg></div></section>
+<div class="s"><div><b>1,310</b>SAT</div><div><b>7.0</b>IELTS</div><div><b>+20.2%</b>mentoring gain</div></div></body></html>

@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio 1 · Monument + Work Index</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f2ec;--ink:#111312;--cu:#c4713b;--green:#1f4a39;--mut:#6a6d66}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Inter,sans-serif;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;padding:22px 32px;z-index:5;font-weight:500;font-size:15px;mix-blend-mode:difference;color:#fff}
+.hero{height:100vh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;padding:0 0 0}
+.hero .bill{position:absolute;top:13vh;left:50%;width:min(52vw,760px);transform:translateX(-50%) rotate(-4deg);animation:fl 7s ease-in-out infinite alternate}
+@keyframes fl{to{transform:translateX(-50%) rotate(-1deg) translateY(-14px)}}
+.hero h1{font:400 clamp(60px,11.6vw,220px)/.8 'Instrument Serif',serif;letter-spacing:-.04em;margin:0;white-space:nowrap;padding:0 1vw;position:relative}
+.hero .meta{position:absolute;left:32px;top:50%;font-size:15px;max-width:22ch;color:var(--mut)}.hero .meta2{position:absolute;right:32px;top:50%;font-size:15px;text-align:right;color:var(--mut)}
+.mq{background:var(--green);color:#f4f2ec;overflow:hidden;white-space:nowrap;padding:16px 0;font:400 28px 'Instrument Serif',serif}.mq span{display:inline-block;animation:m 30s linear infinite;padding-right:40px}@keyframes m{to{transform:translateX(-100%)}}
+.work{padding:100px 32px}.work h2{font:400 15px Inter;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:0 0 24px}
+.item{display:grid;grid-template-columns:60px 1fr auto;gap:20px;align-items:baseline;padding:30px 0;border-top:1px solid #11131233;cursor:pointer;transition:padding .4s}
+.item:last-child{border-bottom:1px solid #11131233}.item:hover{padding-left:24px;color:var(--cu)}
+.item b{font:400 clamp(44px,7vw,112px)/1 'Instrument Serif',serif;letter-spacing:-.03em}.item i{font-style:normal;color:var(--mut);font-size:14px}.item span{font-size:15px;color:var(--mut)}
+.item:hover span,.item:hover i{color:var(--cu)}
+#pv{position:fixed;width:340px;pointer-events:none;opacity:0;transform:translate(-50%,-50%) rotate(-3deg) scale(.9);transition:opacity .25s,transform .25s;z-index:9;box-shadow:0 20px 60px #0004;background:#fff}
+#pv.on{opacity:1;transform:translate(-50%,-50%) rotate(-3deg) scale(1)}#pv img{width:100%;display:block}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:6vw;padding:60px 32px 120px;align-items:center}.about img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 24%;filter:grayscale(1)}
+.about p{font:400 clamp(28px,3.4vw,52px)/1.12 'Instrument Serif',serif;letter-spacing:-.02em;margin:0}
+</style></head><body>
+<nav><span>Javohir Ikromov</span><span>Work · About · Contact</span></nav>
+<section class="hero"><img class="bill" src="../public/vault/bill.jpg" alt=""><div class="meta">Finance applicant.<br>Founder of Finaris.</div><div class="meta2">Gulistan, UZ<br>Class of 2027</div><h1>Javohir Ikromov</h1></section>
+<div class="mq"><span>SAT 1,310 ✳ IELTS 7.0 ✳ 1 OF 1,500 ✳ FINARIS ✳ PENN FINANCE ✳ SAT 1,310 ✳ IELTS 7.0 ✳ 1 OF 1,500 ✳ FINARIS ✳ PENN FINANCE ✳</span></div>
+<section class="work"><h2>Selected work</h2>
+<div class="item" data-img="../public/vault/sat.jpg"><i>2026</i><b>Finaris</b><span>Platform</span></div>
+<div class="item" data-img="../public/vault/np-letter.jpg"><i>2026</i><b>Money Habits Study</b><span>Research</span></div>
+<div class="item" data-img="../public/vault/sat.jpg"><i>2026</i><b>SAT Marathon</b><span>Mentoring</span></div>
+<div class="item" data-img="../public/vault/np-letter.jpg"><i>2025</i><b>President's Talented Children</b><span>Program</span></div>
+<div class="item" data-img="../public/vault/hackathon.jpg"><i>2026</i><b>DoriCHECK</b><span>Startup</span></div>
+<div class="item" data-img="../public/vault/penn-finance.jpg"><i>2026</i><b>Fundamentals of Finance</b><span>Penn</span></div></section>
+<section class="about"><img src="../public/vault/portrait.jpg" alt=""><p>I could not afford a tutor, so I built one for everyone. Now I want to study finance to do it properly.</p></section>
+<div id="pv"><img src="" alt=""></div>
+<script>const pv=document.getElementById('pv'),im=pv.querySelector('img');
+document.querySelectorAll('.item').forEach(e=>{e.addEventListener('mouseenter',()=>{im.src=e.dataset.img;pv.classList.add('on')});e.addEventListener('mouseleave',()=>pv.classList.remove('on'));e.addEventListener('mousemove',x=>{pv.style.left=x.clientX+'px';pv.style.top=x.clientY+'px'})})</script>
+</body></html>

@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio 3 · The Wall</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10204a;--peri:#b9c6e6;--cu:#e08a4a;--paper:#f5f3ec}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--navy);font:400 17px/1.5 Inter,sans-serif}
+.top{display:grid;grid-template-columns:2fr 1fr 1fr;gap:20px;padding:22px 24px;font-size:14px;font-weight:500}
+h1{font:700 clamp(70px,12.4vw,210px)/.86 Fraunces,serif;letter-spacing:-.05em;margin:12px 24px 24px}
+.wall{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:92px;gap:10px;padding:0 24px 24px}
+.t{position:relative;overflow:hidden;border-radius:6px;background:#fff;cursor:pointer}
+.t img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s}.t:hover img{transform:scale(1.07)}
+.t .c{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;color:#fff;font-weight:700;font-size:15px;background:linear-gradient(transparent,#000a);transform:translateY(100%);transition:transform .4s}.t:hover .c{transform:none}
+.t.fill{display:flex;flex-direction:column;justify-content:space-between;padding:20px;cursor:default}
+.t.fill b{font:700 clamp(50px,6vw,100px)/.9 Fraunces,serif;letter-spacing:-.04em}.t.fill span{font-weight:500;font-size:15px}
+.a{grid-column:span 5;grid-row:span 5}.b{grid-column:span 3;grid-row:span 3;background:var(--navy);color:#fff}.c1{grid-column:span 4;grid-row:span 3}.d{grid-column:span 3;grid-row:span 2;background:var(--peri)}.e{grid-column:span 4;grid-row:span 2;background:var(--cu);color:var(--navy)}
+.f{grid-column:span 3;grid-row:span 4}.g{grid-column:span 4;grid-row:span 3}.h{grid-column:span 5;grid-row:span 3}
+</style></head><body>
+<div class="top"><span><b>Javohir Ikromov</b> · Portfolio</span><span>Finance applicant</span><span style="text-align:right">Gulistan · Class of 2027</span></div>
+<h1>Proof of work</h1>
+<div class="wall">
+<div class="t a"><img src="../public/vault/bill.jpg" style="object-position:30% 50%"><div class="c">The first idea in finance: time does the heavy lifting</div></div>
+<div class="t fill b"><b>1,310</b><span>SAT · Math 700</span></div>
+<div class="t c1"><img src="../public/vault/np-letter.jpg"><div class="c">Official letter · 1 of 1,500</div></div>
+<div class="t fill d"><b>7.0</b><span>IELTS Academic · C1</span></div>
+<div class="t fill e"><b>+20.2%</b><span>Accuracy gain, five students</span></div>
+<div class="t f"><img src="../public/vault/portrait.jpg" style="object-position:50% 24%;filter:grayscale(1)"><div class="c">Javohir</div></div>
+<div class="t g"><img src="../public/vault/penn-finance.jpg"><div class="c">Penn · Fundamentals of Finance</div></div>
+<div class="t h"><img src="../public/vault/hackathon.jpg" style="object-position:center"><div class="c">DoriCHECK · Startup hackathon</div></div>
+</div></body></html>

@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Portfolio 2 · Split Stage</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--g:#143a2c;--peri:#b9c6e6;--cu:#d98d4a;--paper:#eef0e6;--ink:#0f1b15}
+*{box-sizing:border-box}body{margin:0;font:400 18px/1.55 'DM Sans',sans-serif;color:var(--ink);background:var(--paper)}
+.wrap{display:grid;grid-template-columns:48% 52%}
+.stage{position:sticky;top:0;height:100vh;background:var(--g);display:grid;place-items:center;overflow:hidden}
+.stage .slide{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:opacity .6s,transform .8s;transform:scale(1.05)}
+.stage .slide.on{opacity:1;transform:none}
+.stage .slide img{max-width:70%;max-height:74vh;box-shadow:0 30px 80px #0006}
+.stage .tag{position:absolute;left:32px;top:28px;color:#cfe0d5;font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase}
+.stage .cnt{position:absolute;right:32px;bottom:26px;color:var(--peri);font:800 64px/1 'Bricolage Grotesque'}
+.list{padding:0 6vw}
+.p{min-height:100vh;display:flex;flex-direction:column;justify-content:center;gap:16px;border-bottom:1px solid #0f1b1522}
+.p small{font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#7a5a2a}
+.p h2{font:800 clamp(48px,6vw,96px)/.95 'Bricolage Grotesque';letter-spacing:-.04em;margin:0}
+.p p{max-width:38ch;margin:0;color:#44514a}.p .chip{display:inline-block;align-self:flex-start;background:var(--peri);padding:8px 16px;border-radius:999px;font-weight:700;font-size:14px}
+.intro{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+.intro h1{font:800 clamp(64px,8.4vw,140px)/.88 'Bricolage Grotesque';letter-spacing:-.05em;margin:0}.intro p{max-width:34ch;margin:22px 0 0;font-size:21px}
+</style></head><body><div class="wrap">
+<div class="stage"><div class="tag">Selected work</div>
+<div class="slide on" data-i="0"><img src="../public/vault/bill.jpg"></div>
+<div class="slide" data-i="1"><img src="../public/vault/sat.jpg"></div>
+<div class="slide" data-i="2"><img src="../public/vault/np-letter.jpg" style="max-height:80vh"></div>
+<div class="slide" data-i="3"><img src="../public/vault/hackathon.jpg"></div>
+<div class="slide" data-i="4"><img src="../public/vault/penn-finance.jpg"></div>
+<div class="cnt" id="c">00</div></div>
+<div class="list">
+<div class="p intro" data-i="0"><h1>Javohir<br>Ikromov</h1><p>Finance applicant from Gulistan. I build things for students who cannot afford help.</p></div>
+<div class="p" data-i="1"><small>Platform · 2026</small><h2>Finaris</h2><p>A free practice-test platform in finance, math and reasoning. More than 25 weeks to build; hundreds of students use it.</p><span class="chip">finaris.uz</span></div>
+<div class="p" data-i="1"><small>Research · 2026</small><h2>Money Habits</h2><p>54 students surveyed. 60% of frequent unplanned spenders ran out of money, against 12.5% of the rest.</p><span class="chip">Under review</span></div>
+<div class="p" data-i="2"><small>Program · 2025</small><h2>1 of 1,500</h2><p>Chosen nationwide from about 30,000 for the President's Talented Children program.</p><span class="chip">Official letter</span></div>
+<div class="p" data-i="3"><small>Startup · 2026</small><h2>DoriCHECK</h2><p>Led the team that presented the startup model at the Startup Saturday Hackathon.</p><span class="chip">Certificate</span></div>
+<div class="p" data-i="4"><small>Course · 2026</small><h2>Penn Finance</h2><p>Fundamentals of Finance by Professor Jessica Wachter, completed on Coursera.</p><span class="chip">Verified</span></div>
+</div></div>
+<script>const sl=[...document.querySelectorAll('.slide')],c=document.getElementById('c');
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const i=+e.target.dataset.i;sl.forEach(s=>s.classList.toggle('on',+s.dataset.i===i));c.textContent=String([...document.querySelectorAll('.p')].indexOf(e.target)).padStart(2,'0')}}),{threshold:.6});
+document.querySelectorAll('.p').forEach(p=>io.observe(p))</script></body></html>
