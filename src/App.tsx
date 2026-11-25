@@ -258,48 +258,48 @@ type Panel = {
 const PANELS: Panel[] = [
   {
     k: 'finaris',
-    kicker: 'Platform · 2025–2026',
+    kicker: 'Platform · founder',
     title: 'Finaris',
     text: 'A free practice-test platform for finance, mathematics, geometry and reasoning. I am the founder and front-end design lead. It took more than 25 weeks to build, and hundreds of students who struggle to pay for courses now use it for free.',
     chip: { label: 'finaris.uz', href: 'https://finaris.uz' },
   },
   {
     k: 'habits',
-    kicker: 'Research · 2026',
+    kicker: 'Research · under review',
     title: 'Money habits',
     text: 'I surveyed 54 students who get money from their parents. 60% of those who often made unplanned purchases ran out of money, against 12.5% of those who rarely did. Setting goals without saving habits gave the same results as no goals. Co-written with an international business teacher, now under review for publication.',
     chip: { label: 'Under review' },
   },
   {
     k: 'sat',
-    kicker: 'Mentoring · 2026',
+    kicker: 'Mentoring · SAT Makon',
     title: 'SAT marathon',
     text: 'At the SAT Makon learning center I saw five students struggling; three commuted from a distant village, two could not afford the fees. I tested them, analyzed their mistakes, worked one-on-one, and asked each to teach the concept back to me.',
     chip: { label: 'Accuracy +20.2% in three lessons' },
   },
   {
     k: 'program',
-    kicker: 'Program · 2025',
+    kicker: 'National program',
     title: '1 of 1,500',
     text: 'Chosen nationwide from about 30,000 applicants (about 5%) for the President’s Talented Children program. 60 hours of Accounting, Business and Global Perspectives modules at the Renessans camp, scored 96, 96 and 99. As the Agency’s letter states, they are not formal Cambridge AS or A Level qualifications.',
     chip: { label: 'Open the official letter', href: '/national-program-confirmation.pdf' },
   },
   {
     k: 'scores',
-    kicker: 'Scores · 2026',
+    kicker: 'Scores · March and October 2026',
     title: 'SAT 1,310 · IELTS 7.0',
     text: 'SAT: Math 700 (91st percentile), Reading and Writing 610, against a three-year average of 1043. IELTS Academic: Listening 8.0, Writing 7.0, Speaking 7.0, Reading 6.5, CEFR level C1.',
   },
   {
     k: 'doricheck',
-    kicker: 'Startup · 2026',
+    kicker: 'Startup · hackathon',
     title: 'DoriCHECK',
     text: 'I led the team that built and presented the DoriCHECK startup model at the Startup Saturday Hackathon, and we received a Certificate of Achievement for an outstanding model.',
     chip: { label: 'Certificate' },
   },
   {
     k: 'penn',
-    kicker: 'Course · 2026',
+    kicker: 'Course · June 2026',
     title: 'Penn Finance',
     text: 'Completed Fundamentals of Finance, taught by Professor Jessica Wachter of the University of Pennsylvania, through Coursera.',
     chip: { label: 'Verify the certificate', href: 'https://coursera.org/verify/B2IQ06IFWFFE' },
@@ -734,14 +734,19 @@ function Footer() {
   return (
     <footer className="foot wrap">
       <div className="giant" aria-hidden="true">
-        {[...'Javohir Ikromov'].map((ch, i) => (
-          <span key={i}>{ch === ' ' ? '\u00a0' : ch}</span>
+        {['Javohir', 'Ikromov'].map((w, wi) => (
+          <span className="word" key={w}>
+            {[...w].map((ch, i) => (
+              <span key={i}>{ch}</span>
+            ))}
+            {wi === 0 ? ' ' : ''}
+          </span>
         ))}
       </div>
       <div className="meta">
         <p>
           Documents are issued under the spelling Javoxir Ikromov, the transliteration used on the IELTS, SAT and
-          Coursera records. The official letter is dated 27 October 2026. Banknote images via Wikimedia Commons: US notes and Uzbekistan 1992 note (public domain), euro note by H. Grobe (CC BY 3.0).
+          Coursera records. The official letter is dated 27 October 2026.
         </p>
         <p>
           <a href="/national-program-confirmation.pdf" target="_blank" rel="noopener">Official letter</a>
